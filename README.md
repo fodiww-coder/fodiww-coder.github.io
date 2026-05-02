@@ -96,7 +96,7 @@
             <div id="mainView"><div class="category-grid" id="categoryGrid"></div></div>
             <div id="categoryView" class="hidden"></div>
             <div id="subcategoryView" class="hidden"></div>
-        </div>
+        </div>  
     </section>
     <section id="contact" class="contact">
         <div class="container">
@@ -121,11 +121,12 @@
                     <h3>Anfrage senden</h3>
                     <form id="contactForm" onsubmit="handleSubmit(event)">
                         <div class="hidden"><input type="text" name="honeypot" tabindex="-1" autocomplete="off"></div>
+                        <div class="form-group"><label for="name">Diese funktion wird gerade nicht unterstützt. Senden Sie mir statt dessen bitte direkt eine Mail oder rufen sSie mich an.</label></div>
                         <div class="form-group"><label for="name">Name *</label><input type="text" id="name" required></div>
                         <div class="form-group"><label for="email">E-Mail *</label><input type="email" id="email" required></div>
                         <div class="form-group"><label for="phone">Telefon</label><input type="tel" id="phone"></div>
                         <div class="form-group"><label for="message">Nachricht *</label><textarea id="message" rows="4" required></textarea></div>
-                        <button type="submit" class="btn-primary" style="width: 100%;">Nachricht senden</button>
+                        <button type="submit" enable="false" class="btn-primary" style="width: 100%;">Nachricht senden</button>
                         <p style="font-size: 0.875rem; color: #6b7280; margin-top: 1rem;">* Pflichtfelder. Ihre Daten werden vertraulich behandelt.</p>
                     </form>
                     <div id="successMessage" class="success-message hidden"><p>Vielen Dank für Ihre Nachricht!</p></div>
@@ -156,7 +157,7 @@
             </div>
             <div class="footer-copyright"><p>&copy; 2026 Forstdienstleistungen Mustermann. Alle Rechte vorbehalten.</p></div>
         </div>
-    </footer>
+    </footer> 
     <script>
         const categories = [{"id":"forstarbeiten","name":"Forstarbeiten","description":"Professionelle Forstdienstleistungen mit modernster Technik.","subcategories":[{"id":"motormanuelle-holzernte","name":"Motormanuelle Holzernte","description":"Fachgerechte Holzernte mit der Motorsäge.","thumbnail":"https://images.unsplash.com/photo-1760217280768-92a693be7f1e?w=400","images":["https://images.unsplash.com/photo-1760217280768-92a693be7f1e?w=1080","https://images.unsplash.com/photo-1708346061362-821b049acf48?w=1080"]},{"id":"rueckearbeiten","name":"Rückearbeiten","description":"Bodenschonende Holzrückung.","thumbnail":"https://images.unsplash.com/photo-1637176463434-f1c33614813b?w=400","images":[]}]},{"id":"grundstueck","name":"Grundstückspflege","description":"Umfassende Dienstleistungen.","subcategories":[{"id":"landschaftspflege","name":"Landschaftspflege","description":"Regelmäßige Pflege.","thumbnail":"https://images.unsplash.com/photo-1649427909612-353b0042ab79?w=400","images":[]}]},{"id":"schaerfdienst","name":"Schärfdienst","description":"Professioneller Schärfservice.","subcategories":[{"id":"saegekette","name":"Sägekettenschärfen","description":"Professionelles Schärfen.","thumbnail":"https://images.unsplash.com/photo-1757597738186-07ed394d3b32?w=400","images":[]}]}];
         let selectedCategory=null,selectedSubcategory=null;
